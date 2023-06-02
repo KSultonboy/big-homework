@@ -1,0 +1,92 @@
+.benefits {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 120px;
+    &__row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        &-text {
+            font-weight: 700;
+            @include adaptive-value('font-size', 16, 8);
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $gray-900;
+        }
+        &-title {
+            font-weight: 900;
+            @include adaptive-value('font-size', 46, 28);
+            line-height: 130%;
+            text-align: center;
+            color: $gray-900;
+        }
+    }
+    &__four {
+        display: flex;
+        margin-bottom: 60px;
+        .main-benefit {
+            display: flex;
+            @include flex(center, center);
+            width: 307px;
+            height: 46px;
+            .benefit-icon {
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+            }
+            & span {
+                font-weight: 700;
+                @include adaptive-value('font-size', 16, 8);
+                line-height: 160%;
+                color: $gray-600;
+            }
+        }
+        .starred {
+            border: 1px solid $primary;
+            border-radius: 4px;
+            color: $primary;
+        }
+    }
+    &__bottom-part {
+        @include flex(center, space-between);
+        @include media(1420){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+                .bottom {
+            &__left-side {
+                width: 35%;
+                @include media (900){
+                    width: 90%;
+                }
+            }
+            &__right-side {
+                display: flex;
+                justify-content: center;
+                @include media (630){
+                    width: 400px;
+                    height: 340px;
+                }
+            }
+        }
+        .left-side {
+            &__title {
+                font-weight: 900;
+                @include adaptive-value('font-size', 32, 28);
+                line-height: 130%;
+                color: $gray-900;
+                margin-bottom: 24px;
+            }
+            &__text {
+                font-weight: 400;
+                @include adaptive-value('font-size', 16, 8);
+                line-height: 160%;
+                color: $gray-800;
+            }
+        }
+    }
+}
